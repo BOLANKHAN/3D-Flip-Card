@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: linear-gradient(375deg, #d87f0a, #2ede98);
+}
+
+.wrapper {
+    perspective: 1000px;
+    height: 400px;
+    width: 320px;
+}
+
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.wrapper:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card .front-face,
+.card .back-face {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: aliceblue;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card .back-face {
+    transform: rotateY(180deg); /* Ensure the back face is properly displayed */
+}
+.card .front-face img,
+.card .back-face img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #1cc7d0;
+}
+
+.card .info {
+    text-align: center;
+}
+
+.card .info .title {
+    font-size: 30px;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.card ul {
+    display: flex;
+}
+
+.card ul a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: red;
+    font-size: 25px;
+    text-align: center;
+    border: 2px solid transparent;
+    line-height: 40px;
+    color: white;
+    margin: 0px 5px;
+    border-radius: 50%;
+}
+
+.card ul a:hover {
+    background: none;
+    background-color: aqua;
+    border-color: #1cc7d0;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+}
+p{
+   margin-top: 10px;
+    font-weight: bold;
+
+}
+
+/* Now i am adding one background it's my own style*/
+
